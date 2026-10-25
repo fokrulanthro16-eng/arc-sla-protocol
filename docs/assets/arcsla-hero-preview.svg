@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#070B14;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A1628;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="splitBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="90%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="90%" style="stop-color:#06B6D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="heroGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:0.15" />
+      <stop offset="50%" style="stop-color:#10B981;stop-opacity:0.08" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:0.15" />
+    </linearGradient>
+    <filter id="glow-cyan">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-emerald">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="roundedCard">
+      <rect rx="12" ry="12" width="100%" height="100%"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Hero glow overlay -->
+  <rect width="1200" height="630" fill="url(#heroGlow)"/>
+
+  <!-- Top grid lines (subtle) -->
+  <g stroke="#1E293B" stroke-width="0.5" opacity="0.4">
+    <line x1="0" y1="157" x2="1200" y2="157"/>
+    <line x1="0" y1="314" x2="1200" y2="314"/>
+    <line x1="0" y1="471" x2="1200" y2="471"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+  </g>
+
+  <!-- ═══════════════════════════════ HEADER BAR ═══════════════════════════════ -->
+  <rect x="0" y="0" width="1200" height="64" fill="#0A1628" rx="0"/>
+  <rect x="0" y="62" width="1200" height="2" fill="#06B6D4" opacity="0.4"/>
+
+  <!-- Brand Logo -->
+  <text x="32" y="38" font-family="'Courier New', monospace" font-size="20" font-weight="700" fill="#F8FAFC" letter-spacing="1">Arc</text>
+  <text x="75" y="38" font-family="'Courier New', monospace" font-size="20" font-weight="400" fill="#06B6D4" letter-spacing="1">SLA</text>
+  <text x="115" y="38" font-family="'Courier New', monospace" font-size="14" font-weight="300" fill="#475569" letter-spacing="2"> // Autonomous AI Clearinghouse</text>
+
+  <!-- Network badge -->
+  <rect x="780" y="18" width="168" height="28" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1"/>
+  <circle cx="798" cy="32" r="4" fill="#10B981" filter="url(#glow-emerald)"/>
+  <text x="810" y="37" font-family="'Inter', Arial, sans-serif" font-size="11" font-weight="600" fill="#10B981">Arc Network • Active</text>
+
+  <!-- Contract badge -->
+  <rect x="962" y="18" width="190" height="28" rx="14" fill="#0F172A" stroke="#06B6D4" stroke-width="1"/>
+  <text x="978" y="37" font-family="'Courier New', monospace" font-size="10" fill="#06B6D4">0xdedc6e...ca7057 ↗</text>
+
+  <!-- Connect wallet button -->
+  <!-- (right side, shown as connected) -->
+  <rect x="1088" y="15" width="96" height="34" rx="8" fill="#06B6D4" opacity="0.15" stroke="#06B6D4" stroke-width="1"/>
+  <text x="1136" y="37" font-family="'Inter', Arial, sans-serif" font-size="11" font-weight="600" fill="#06B6D4" text-anchor="middle">Connected ✓</text>
+
+  <!-- ═══════════════════════════════ KPI CARDS ════════════════════════════════ -->
+  <!-- Card 1: Total USDC Escrowed -->
+  <rect x="24" y="80" width="272" height="88" rx="12" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1"/>
+  <rect x="24" y="80" width="272" height="2" rx="1" fill="#06B6D4" opacity="0.6"/>
+  <text x="44" y="108" font-family="'Inter', Arial, sans-serif" font-size="11" fill="#64748B" font-weight="500">TOTAL USDC ESCROWED</text>
+  <text x="44" y="142" font-family="'Courier New', monospace" font-size="28" font-weight="700" fill="#F8FAFC">$2,847.50</text>
+  <text x="232" y="142" font-family="'Inter', Arial, sans-serif" font-size="11" fill="#10B981">+12.4%</text>
+
+  <!-- Card 2: Revenue Splits -->
+  <rect x="312" y="80" width="272" height="88" rx="12" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1"/>
+  <rect x="312" y="80" width="272" height="2" rx="1" fill="#10B981" opacity="0.6"/>
+  <text x="332" y="108" font-family="'Inter', Arial, sans-serif" font-size="11" fill="#64748B" font-weight="500">90/10 REVENUE SPLITS</text>
+  <text x="332" y="142" font-family="'Courier New', monospace" font-size="28" font-weight="700" fill="#F8FAFC">1,204</text>
+  <text x="430" y="142" font-family="'Inter', Arial, sans-serif" font-size="11" fill="#10B981">Settled</text>
+
+  <!-- Card 3: Auto-Refunds -->
+  <rect x="600" y="80" width="272" height="88" rx="12" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1"/>
+  <rect x="600" y="80" width="272" height="2" rx="1" fill="#F59E0B" opacity="0.6"/>
+  <text x="620" y="108" font-family="'Inter', Arial, sans-serif" font-size="11" fill="#64748B" font-weight="500">SLA BREACH AUTO-REFUNDS</text>
+  <text x="620" y="142" font-family="'Courier New', monospace" font-size="28" font-weight="700" fill="#F8FAFC">847</text>
+  <text x="682" y="142" font-family="'Inter', Arial, sans-serif" font-size="11" fill="#F59E0B">100% Protected</text>
+
+  <!-- Card 4: Active Tasks -->
+  <rect x="888" y="80" width="288" height="88" rx="12" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1"/>
+  <rect x="888" y="80" width="288" height="2" rx="1" fill="#8B5CF6" opacity="0.6"/>
+  <text x="908" y="108" font-family="'Inter', Arial, sans-serif" font-size="11" fill="#64748B" font-weight="500">ACTIVE ONCHAIN SLA TASKS</text>
+  <text x="908" y="142" font-family="'Courier New', monospace" font-size="28" font-weight="700" fill="#F8FAFC">23</text>
+  <text x="952" y="142" font-family="'Inter', Arial, sans-serif" font-size="11" fill="#8B5CF6">Live in Escrow</text>
+
+  <!-- ═══════════════════════════════ SELF-LOOP HERO BUTTON ════════════════════ -->
+  <rect x="24" y="184" width="1152" height="52" rx="10" fill="#06B6D4" opacity="0.08" stroke="#06B6D4" stroke-width="1.5"/>
+  <text x="600" y="216" font-family="'Inter', Arial, sans-serif" font-size="15" font-weight="700" fill="#06B6D4" text-anchor="middle" filter="url(#glow-cyan)">🚀  Execute 1-Click 0.01 USDC Self-Loop Verification  →  approve(0.01 USDC)  →  createTask  →  executeAndSettleSLA(180ms)</text>
+
+  <!-- ═══════════════════════════════ LEFT PANEL ═══════════════════════════════ -->
+  <rect x="24" y="252" width="560" height="352" rx="12" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1"/>
+  <rect x="24" y="252" width="560" height="2" rx="1" fill="#10B981" opacity="0.7"/>
+
+  <!-- Panel title -->
+  <text x="44" y="280" font-family="'Inter', Arial, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">1. Lock USDC in AI SLA Vault</text>
+
+  <!-- Amount pills -->
+  <rect x="44" y="294" width="80" height="30" rx="15" fill="#10B981" opacity="0.2" stroke="#10B981" stroke-width="1"/>
+  <text x="84" y="314" font-family="'Inter', Arial, sans-serif" font-size="11" font-weight="600" fill="#10B981" text-anchor="middle">0.01 USDC</text>
+
+  <rect x="136" y="294" width="80" height="30" rx="15" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+  <text x="176" y="314" font-family="'Inter', Arial, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">0.05 USDC</text>
+
+  <rect x="228" y="294" width="80" height="30" rx="15" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+  <text x="268" y="314" font-family="'Inter', Arial, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">0.10 USDC</text>
+
+  <rect x="320" y="294" width="80" height="30" rx="15" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+  <text x="360" y="314" font-family="'Inter', Arial, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">0.25 USDC</text>
+
+  <!-- Self-loop badge -->
+  <rect x="44" y="340" width="520" height="36" rx="8" fill="#10B981" opacity="0.1" stroke="#10B981" stroke-width="1"/>
+  <text x="54" y="363" font-family="'Inter', Arial, sans-serif" font-size="11" font-weight="600" fill="#10B981">⚡ Safe Self-Loop Active: 90% + 10% returns to your wallet</text>
+
+  <!-- SLA Slider label -->
+  <text x="44" y="404" font-family="'Inter', Arial, sans-serif" font-size="11" fill="#94A3B8">SLA Threshold</text>
+  <text x="520" y="404" font-family="'Courier New', monospace" font-size="12" font-weight="700" fill="#06B6D4" text-anchor="end">500 ms</text>
+
+  <!-- Slider track -->
+  <rect x="44" y="412" width="520" height="6" rx="3" fill="#1E293B"/>
+  <rect x="44" y="412" width="174" height="6" rx="3" fill="#10B981"/>
+  <circle cx="218" cy="415" r="8" fill="#06B6D4" filter="url(#glow-cyan)"/>
+
+  <!-- Zone labels -->
+  <text x="44" y="436" font-family="'Inter', Arial, sans-serif" font-size="9" fill="#10B981">100ms</text>
+  <text x="230" y="436" font-family="'Inter', Arial, sans-serif" font-size="9" fill="#F59E0B">500ms SLA</text>
+  <text x="520" y="436" font-family="'Inter', Arial, sans-serif" font-size="9" fill="#EF4444" text-anchor="end">2000ms</text>
+
+  <!-- Revenue split bar -->
+  <text x="44" y="462" font-family="'Inter', Arial, sans-serif" font-size="11" fill="#94A3B8">Revenue Split</text>
+  <rect x="44" y="470" width="520" height="20" rx="10" fill="url(#splitBar)"/>
+  <text x="200" y="485" font-family="'Inter', Arial, sans-serif" font-size="10" font-weight="600" fill="white" text-anchor="middle">90% AI Provider Agent</text>
+  <text x="510" y="485" font-family="'Inter', Arial, sans-serif" font-size="10" font-weight="600" fill="#0F172A" text-anchor="end">10% Treasury</text>
+
+  <!-- Step buttons -->
+  <rect x="44" y="506" width="250" height="40" rx="8" fill="#0F172A" stroke="#06B6D4" stroke-width="1.5"/>
+  <text x="169" y="531" font-family="'Inter', Arial, sans-serif" font-size="12" font-weight="600" fill="#06B6D4" text-anchor="middle">① Approve USDC</text>
+
+  <rect x="314" y="506" width="250" height="40" rx="8" fill="#10B981" opacity="0.9"/>
+  <text x="439" y="531" font-family="'Inter', Arial, sans-serif" font-size="12" font-weight="600" fill="#052E16" text-anchor="middle">② Create &amp; Lock SLA Escrow</text>
+
+  <!-- ═══════════════════════════════ RIGHT PANEL — TERMINAL ═══════════════════ -->
+  <rect x="600" y="252" width="576" height="352" rx="12" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1"/>
+  <rect x="600" y="252" width="576" height="2" rx="1" fill="#06B6D4" opacity="0.7"/>
+
+  <!-- Terminal header -->
+  <text x="620" y="280" font-family="'Inter', Arial, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">2. AI Agent Execution Terminal</text>
+
+  <!-- Terminal body -->
+  <rect x="620" y="292" width="536" height="200" rx="8" fill="#050810" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- Terminal lines -->
+  <text x="636" y="316" font-family="'Courier New', monospace" font-size="10" fill="#10B981">[AGENT] Initializing ArcSLA task execution pipeline...</text>
+  <text x="636" y="334" font-family="'Courier New', monospace" font-size="10" fill="#06B6D4">[CONTRACT] createTask(provider=0xdedc...7057, amount=10000)</text>
+  <text x="636" y="352" font-family="'Courier New', monospace" font-size="10" fill="#8B5CF6">[ESCROW] Locking 0.01 USDC → tx: 0x8f9c...a1b2 ✓</text>
+  <text x="636" y="370" font-family="'Courier New', monospace" font-size="10" fill="#F59E0B">[INFERENCE] Dispatching AI inference payload to provider...</text>
+  <text x="636" y="388" font-family="'Courier New', monospace" font-size="10" fill="#10B981">[TELEMETRY] Measured Latency: 184ms  (SLA PASSED ≤ 500ms)</text>
+  <text x="636" y="406" font-family="'Courier New', monospace" font-size="10" fill="#94A3B8">[HASH] SHA-256 Proof: 0xd4e8...f2a9c3b1</text>
+  <text x="636" y="424" font-family="'Courier New', monospace" font-size="10" fill="#06B6D4">[SETTLE] executeAndSettleSLA(taskId=1, 184ms, proofHash)</text>
+  <text x="636" y="442" font-family="'Courier New', monospace" font-size="10" fill="#10B981">[SPLIT] ✓ 90% (0.009 USDC) → Provider  |  10% (0.001 USDC) → Treasury</text>
+  <text x="636" y="460" font-family="'Courier New', monospace" font-size="10" fill="#F8FAFC">[DONE] Settlement complete. claimPayout() available._</text>
+
+  <!-- Task card -->
+  <rect x="620" y="506" width="536" height="80" rx="8" fill="#0A1628" stroke="#10B981" stroke-width="1"/>
+  <rect x="620" y="506" width="4" height="80" rx="2" fill="#10B981"/>
+
+  <text x="640" y="526" font-family="'Courier New', monospace" font-size="10" fill="#94A3B8">Task #1  •  0.01 USDC  •  SLA: 500ms</text>
+  <rect x="750" y="512" width="120" height="20" rx="10" fill="#10B981" opacity="0.2" stroke="#10B981" stroke-width="1"/>
+  <text x="810" y="526" font-family="'Inter', Arial, sans-serif" font-size="9" font-weight="700" fill="#10B981" text-anchor="middle">90/10 SPLIT SETTLED</text>
+
+  <!-- 3 action buttons on card -->
+  <rect x="634" y="540" width="166" height="32" rx="6" fill="#10B981" opacity="0.15" stroke="#10B981" stroke-width="1"/>
+  <text x="717" y="561" font-family="'Inter', Arial, sans-serif" font-size="9" font-weight="600" fill="#10B981" text-anchor="middle">⚡ Execute (180ms)</text>
+
+  <rect x="810" y="540" width="166" height="32" rx="6" fill="#F59E0B" opacity="0.15" stroke="#F59E0B" stroke-width="1"/>
+  <text x="893" y="561" font-family="'Inter', Arial, sans-serif" font-size="9" font-weight="600" fill="#F59E0B" text-anchor="middle">🛡️ Breach (1420ms)</text>
+
+  <rect x="986" y="540" width="156" height="32" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+  <text x="1064" y="561" font-family="'Inter', Arial, sans-serif" font-size="9" font-weight="600" fill="#64748B" text-anchor="middle">↩️ Emergency Reclaim</text>
+
+  <!-- ═══════════════════════════════ LEDGER TABLE ══════════════════════════════ -->
+  <!-- Table header row -->
+  <rect x="24" y="618" width="1152" height="2" rx="1" fill="#1E293B"/>
+
+  <!-- Verified badge bottom -->
+  <text x="600" y="620" font-family="'Inter', Arial, sans-serif" font-size="10" fill="#475569" text-anchor="middle">Verified Onchain Explorer Audit Ledger • All transactions verifiable on explorer.testnet.arc.io</text>
+
+  <!-- Subtle cyan glow line at top -->
+  <rect x="0" y="0" width="1200" height="2" fill="#06B6D4" opacity="0.6"/>
+</svg>
